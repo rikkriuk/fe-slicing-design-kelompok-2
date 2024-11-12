@@ -1,0 +1,11 @@
+.text-color {
+   color: #0E1F51
+}
+
+.btn-custom {
+   background-color: #FF3E54;
+   border: none;
+   color: #fff;
+   border-radius: 5px;
+   padding: 10px 14px;
+}
