@@ -5,3 +5,10 @@
 .color-author-blog {
   color: #0e1f51;
 }
+
+@media (max-width: 768px) {
+  .image-blog {
+    width: 100%;
+    object-fit: cover;
+  }
+}
