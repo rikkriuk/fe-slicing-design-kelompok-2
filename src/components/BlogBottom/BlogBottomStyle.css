@@ -1,0 +1,27 @@
+.card .card-body h2 {
+  color: #ff3e54;
+  font-size: 20px;
+}
+.card .card-body p {
+  color: #252525;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.card .card-body .p-custom {
+  color: #0e1f51;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.blog-bottom img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.author img {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

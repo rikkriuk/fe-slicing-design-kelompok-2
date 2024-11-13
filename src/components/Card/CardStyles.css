@@ -1,0 +1,24 @@
+.section-card h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.section-card h6 {
+  margin-top: 6px !important;
+  font-size: 20px;
+  color: #ff3e54;
+}
+.section-card p {
+  font-size: 16px;
+  color: #0e1f51;
+}
+.section-card h1 {
+  font-size: 40px;
+  color: #0e1f51;
+}
+.section-card {
+  text-align: center;
+}
+
+.section-card .card {
+  border: none;
+}

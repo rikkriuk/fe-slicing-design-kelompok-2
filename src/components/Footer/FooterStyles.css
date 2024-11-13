@@ -51,3 +51,7 @@
    border: none;
    outline: none;
 }
+
+a.footer-text:hover {
+   color: #FF3E54;
+}
