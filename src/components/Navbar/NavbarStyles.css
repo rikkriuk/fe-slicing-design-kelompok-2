@@ -28,7 +28,7 @@ li a.text-second-color:hover {
    height: 100vh;
    backdrop-filter: blur(5px);
    transition: 0.3s;
-   z-index: 0;
+   z-index: 1;
 }
 
 @media (max-width: 992px) {
@@ -45,6 +45,7 @@ li a.text-second-color:hover {
       top: 0;
       bottom: 0;
       transition: 0.3s;
+      z-index: 2;
    }
 
    .nav-small-screen ul {
