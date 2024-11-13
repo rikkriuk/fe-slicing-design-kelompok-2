@@ -5,7 +5,7 @@ import TitlePageComponent from "../TitlePage/TitlePageComponent";
 const CardComponent = ({ leadersData }) => {
   return (
     // section card for About Component
-    <section className="section-card container">
+    <section className="section-card container mb-5">
       <TitlePageComponent title={"Services"} description={"Our Expertice"} />
       <div className="row">
         {leadersData &&

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./OurWorkStyles.css";
 import TitlePageComponent from "../TitlePage/TitlePageComponent";
 import Image1 from "../../assets/OurWorkComponent/image-1.png";
@@ -8,36 +8,74 @@ import Image4 from "../../assets/OurWorkComponent/image-4.png";
 import Image5 from "../../assets/OurWorkComponent/image-5.png";
 
 const OurWorkComponent = () => {
+   const [activeCategory, setActiveCategory] = useState("ALL");
+
+   const images = [
+      { src: Image1, category: "ALL", colSize: "col-md-8" },
+      { src: Image2, category: "LIFE", colSize: "col-md-4" },
+      { src: Image3, category: "NATURE", colSize: "col-md-3" },
+      { src: Image4, category: "STORIES", colSize: "col-md-4" },
+      { src: Image5, category: "TRAVEL", colSize: "col-md-5" },
+   ];
+
+   const handleCategoryChange = (category) => {
+      setActiveCategory(category);
+   };
+
+   const filteredImages = activeCategory === "ALL"
+      ? images
+      : images.filter(image => image.category === activeCategory);
+
    return (
-      <section className="container-fluid pe-5">
+      <section className="container-fluid">
          <div className="container d-flex flex-column align-items-center">
             <TitlePageComponent title={"Portfolio"} description={"Our Work"} />
             <div>
-               <button className="btn-work-custom active">ALL</button>
-               <button className="btn-work-custom">LIFE</button>
-               <button className="btn-work-custom">MOMENTS</button>
-               <button className="btn-work-custom">NATURE</button>
-               <button className="btn-work-custom">STORIES</button>
-               <button className="btn-work-custom">TRAVEL</button>
+               <button 
+                  className={`btn-work-custom ${activeCategory === "ALL" ? "active" : ""}`}
+                  onClick={() => handleCategoryChange("ALL")}
+               >
+                  ALL
+               </button>
+               <button 
+                  className={`btn-work-custom ${activeCategory === "LIFE" ? "active" : ""}`}
+                  onClick={() => handleCategoryChange("LIFE")}
+               >
+                  LIFE
+               </button>
+               <button 
+                  className={`btn-work-custom ${activeCategory === "MOMENTS" ? "active" : ""}`}
+                  onClick={() => handleCategoryChange("MOMENTS")}
+               >
+                  MOMENTS
+               </button>
+               <button 
+                  className={`btn-work-custom ${activeCategory === "NATURE" ? "active" : ""}`}
+                  onClick={() => handleCategoryChange("NATURE")}
+               >
+                  NATURE
+               </button>
+               <button 
+                  className={`btn-work-custom ${activeCategory === "STORIES" ? "active" : ""}`}
+                  onClick={() => handleCategoryChange("STORIES")}
+               >
+                  STORIES
+               </button>
+               <button 
+                  className={`btn-work-custom ${activeCategory === "TRAVEL" ? "active" : ""}`}
+                  onClick={() => handleCategoryChange("TRAVEL")}
+               >
+                  TRAVEL
+               </button>
             </div>
 
             <div className="container mt-5">
                <div className="row g-4">
-                  <div className="col-md-8 our-work-image-container overflow-hidden rounded">
-                     <img src={Image1} className="img-fluid rounded" alt="Top Left Image"/>
-                  </div>
-                  <div className="col-md-4 our-work-image-container overflow-hidden rounded">
-                     <img src={Image2} className="img-fluid rounded" alt="Top Right Image"/>
-                  </div>
-                  <div className="col-md-3 our-work-image-container overflow-hidden rounded">
-                     <img src={Image3} className="img-fluid rounded" alt="Bottom Left Image"/>
-                  </div>
-                  <div className="col-md-4 our-work-image-container overflow-hidden rounded">
-                     <img src={Image4} className="img-fluid rounded" alt="Bottom Center Image"/>
-                  </div>
-                  <div className="col-md-5 our-work-image-container overflow-hidden rounded">
-                     <img src={Image5} className="img-fluid rounded" alt="Bottom Right Image"/>
-                  </div>
+                  {filteredImages.map((image, index) => (
+                     <div key={index} className={`${image.colSize} our-work-image-container overflow-hidden rounded`}>
+                        <img src={image.src} className="img-fluid rounded" alt={`Portfolio Image ${index + 1}`} />
+                     </div>
+                  ))}
                </div>
             </div>
 
@@ -46,7 +84,7 @@ const OurWorkComponent = () => {
             </div>
          </div>
       </section>
-   )
-}
+   );
+};
 
 export default OurWorkComponent;

@@ -1,17 +1,20 @@
 import React from "react";
+import TitlePageComponent from "../TitlePage/TitlePageComponent";
 import "./FormContactStyles.css";
 
-const FormContactComponent = () => {
+const FormContactComponent = ({ page }) => {
   return (
-    <div className="container-fluid  bg-color-container-contact">
+    <div className={`container-fluid ${page === "home" ? "bg-contact-second" : "bg-color-container-contact"}`}>
+      <TitlePageComponent title="Get In Touch" description="Hey! Lets Talk" page={page} />
+
       <div className="container">
         <div className="row">
           <div className="col-md" />
-          <form className="col-md-6 card p-4 mb-5 me-3">
+          <form className="col-md-8 card p-4 mb-5 me-3">
             <div className="my-3">
               <input
                 type="text"
-                className="form-control bg-input-contact"
+                className="form-control bg-input-contact py-2"
                 id="name"
                 placeholder="Name"
               />
@@ -19,7 +22,7 @@ const FormContactComponent = () => {
             <div className="mb-3">
               <input
                 type="email"
-                className="form-control bg-input-contact"
+                className="form-control bg-input-contact py-2"
                 id="email"
                 placeholder="Email"
               />
@@ -27,14 +30,14 @@ const FormContactComponent = () => {
             <div className="mb-3">
               <input
                 type="number"
-                className="form-control bg-input-contact"
+                className="form-control bg-input-contact py-2"
                 id="phone"
                 placeholder="Phone"
               />
             </div>
             <div className="mb-3">
               <textarea
-                className="form-control bg-input-contact"
+                className="form-control bg-input-contact py-2"
                 id="exampleFormControlTextarea1"
                 rows="5"
                 placeholder="Your Message"
