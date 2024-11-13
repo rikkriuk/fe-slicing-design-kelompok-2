@@ -1,9 +1,7 @@
-h2 {
-  color: #ff3e54 !important;
-  font-size: 20px;
+.color-primary-blog {
+  color: #ff3e54;
 }
-p {
-  color: #252525;
-  font-size: 14px;
-  margin-bottom: 0px !important;
+
+.color-author-blog {
+  color: #0e1f51;
 }
