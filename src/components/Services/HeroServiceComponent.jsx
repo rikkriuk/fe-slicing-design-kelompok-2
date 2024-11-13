@@ -3,6 +3,7 @@ import heroImage from "../../assets/ServicesComponent/hero-img.png";
 import "./ServiceStyles.css";
 import lamp from "../../assets/ServicesComponent/Icons/lamp.png";
 import star from "../../assets/ServicesComponent/Icons/star.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -21,8 +22,8 @@ const HeroSection = () => {
 
             {/* Right Text Section */}
             <div className="col-lg-6">
-              <h5 className="text-red mb-2">\ What We Do \</h5>
-              <h2 className="fw-bold text-blue mb-3">
+              <h5 className="text-red fw-bold fs-3 mb-2">\ What We Do \</h5>
+              <h2 className="my-4 fw-semibold fs-1 fs-sm-4 fs-md-5 fs-lg-6 text-blue mb-3">
                 We Develop Product That People Love to Use.
               </h2>
               <p>
@@ -39,7 +40,7 @@ const HeroSection = () => {
               {/* Vision and Goal Cards */}
               <div className="d-flex justify-content-between flex-column flex-md-row gap-3 mt-4">
                 <div
-                  className="me-2 align-items-center"
+                  className="me-2 d-flex flex-column flex-lg-row gap-3"
                 >
                   <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
                     {/* Icon Section */}
@@ -60,10 +61,7 @@ const HeroSection = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div
-                  className="d-flex align-items-center"
-                >
+                  
                   <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
                     {/* Icon Section */}
                     <div className="icon-container me-3">
@@ -78,10 +76,15 @@ const HeroSection = () => {
                     {/* Text Section */}
                     <div>
                       <h5 className="text-red fw-bold mb-1">Our Goal</h5>
-                      <p className="mb-0">It is a long established fact that</p>
+                      <p className="text-dark mb-0">
+                        It is a long established fact that
+                      </p>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="my-5">
+                <Link to={"/our-services"} className="btn-view-more text-decoration-none">View More</Link>
               </div>
             </div>
           </div>

@@ -1,0 +1,55 @@
+.bg-testimonial {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.bg-testimonial.middle {
+  transform: scale(1.1); 
+  z-index: 1; 
+}
+
+.bg-testimonial.first,
+.bg-testimonial.last {
+  transform: scale(0.9);
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.bg-testimonial.first {
+  position: relative;
+  left: -15px;
+}
+
+.bg-testimonial.last {
+  position: relative;
+  right: -15px;
+}
+
+.testimonial-color {
+   color: #FF3E54;
+}
+
+@media (max-width: 767px) {
+   .bg-testimonial.middle {
+      transform: scale(1); 
+      z-index: 1; 
+   }
+
+   .bg-testimonial.first,
+   .bg-testimonial.last {
+   transform: scale(1);
+   opacity: 1;
+   overflow: hidden;
+   }
+
+   .bg-testimonial.first {
+      position: relative;
+      left: 0px;
+   }
+
+   .bg-testimonial.last {
+      position: relative;
+      right: 0px;
+   }
+}
+
