@@ -6,7 +6,7 @@ import Card from "../components/Card/CardComponent";
 const AboutContainer = () => {
   return (
     <div>
-      <About title="About US" subtitle="Home/About" />
+      <About title="About" subtitle="Home/About" />
       <AboutUS />
       <Card />
     </div>

@@ -18,7 +18,7 @@ const AboutUsComponent = () => {
             />
           </div>
           <div className="col-md-6">
-            <h4>About Us</h4>
+            <h4>/About us/</h4>
             <h1> One of the Fastest Way to Business Growth</h1>
             <p>
               It is a long established fact that a reader will be distracted by
