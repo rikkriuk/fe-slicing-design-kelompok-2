@@ -37,12 +37,11 @@ const HeroSection = () => {
               </p>
 
               {/* Vision and Goal Cards */}
-              <div className="d-flex justify-content-between mt-4">
+              <div className="d-flex flex-lg-row flex-column justify-content-between mt-4">
                 <div
-                  className="me-2 align-items-center"
-                  style={{ width: "50%" }}
+                  className=" me-2 align-items-center"
                 >
-                  <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
+                  <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded mb-lg-0 mb-4">
                     {/* Icon Section */}
                     <div className="icon-container me-3">
                       <div className="icon-bg d-flex justify-content-center align-items-center rounded">
@@ -63,15 +62,14 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div
-                  className="d-flex ms-2 align-items-center"
-                  style={{ width: "50%" }}
+                  className="d-flex ms-lg-2 align-items-center"
                 >
                   <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
                     {/* Icon Section */}
                     <div className="icon-container me-3">
                       <div className="icon-bg d-flex justify-content-center align-items-center rounded">
                         <img
-                          src={star} // Replace with your icon path
+                          src={star}
                           alt="Goal Icon"
                           className="icon-img"
                         />
