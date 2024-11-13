@@ -1,0 +1,53 @@
+.bg-color {
+  background-color: #0e1f51;
+}
+
+.btn-social-media {
+   padding: 8px 11px;
+   background-color: white;
+   border-radius: 10px;
+   color: #FF3E54;
+}
+
+.line-custom::after {
+   content: "";
+   display: block;
+   width: 50px;
+   height: 4px;
+   background-color: #FF3E54;
+   margin-top: 10px;
+}
+
+.img-logo {
+   width: 65px;
+   height: 65px;
+   background-color: white;
+   padding: 13px;
+   border-radius: 10px;
+   object-fit: contain;
+}
+
+.text-main-color {
+   color: #FF3E54;
+}
+
+.btn-submit-custom {
+   background-color: #FF3E54;
+   padding: 12px 15px;
+   color: white;
+   font-size: 0.9rem;
+   border-radius: 10px;
+   border: none;
+}
+
+.input-custom {
+   border: none;
+   padding: 10px 17px;
+   font-weight: 600;
+   border-radius: 10px;
+}
+
+.input-custom:focus {
+   border: none;
+   outline: none;
+}
