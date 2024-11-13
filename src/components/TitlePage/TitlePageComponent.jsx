@@ -1,9 +1,9 @@
 import React from "react";
 import "./TitlePageStyles.css";
 
-const TitlePage = ({ title, description }) => {
+const TitlePageComponent = ({ title, description }) => {
   return (
-    <div className="container-fluid bg-color-container-title">
+    <div className="container-fluid">
       <div className="container">
         <div class="d-flex justify-content-center text-center pd-custom-title ">
           <div>
@@ -18,4 +18,4 @@ const TitlePage = ({ title, description }) => {
   );
 };
 
-export default TitlePage;
+export default TitlePageComponent;
