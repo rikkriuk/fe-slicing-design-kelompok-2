@@ -8,7 +8,7 @@ import FormContactComponent from "../components/Contact/FormContactComponent";
 const ContactContainer = () => {
   return (
     <>
-      <AboutComponent title="Contact" subtitle="Home/Contact" />
+      <AboutComponent title="Contact" subtitle="Home / Contact" />
       <div className="bg-color-container-contact">
         <TitlePageComponent title="Get In Touch" description="Hey! Lets Talk" />
         <FormContactComponent />
