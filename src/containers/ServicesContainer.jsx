@@ -1,11 +1,14 @@
 import React from "react";
+import HeroSection from "../components/Services/HeroServiceComponent";
+import ExpertiseSection from "../components/Services/ExperticeComponent";
 
 const ServicesContainer = () => {
-   return (
-        <div>
-            <h1>Services Container</h1>
-        </div>
-    )
-}
+  return (
+    <>
+      <HeroSection/>
+      <ExpertiseSection/>
+    </>
+  );
+};
 
 export default ServicesContainer;
