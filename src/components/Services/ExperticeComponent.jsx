@@ -2,7 +2,7 @@ import React from "react";
 
 const ExpertiseSection = ({ services }) => {
   return (
-    <section className="pe-5">
+    <section className="container-fluid">
       <div className="container text-center">
         <div className="row mt-2 mb-5">
           {services.map((service, index) => (
