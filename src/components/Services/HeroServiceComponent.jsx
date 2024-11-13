@@ -7,7 +7,7 @@ import star from "../../assets/ServicesComponent/Icons/star.png";
 const HeroSection = () => {
   return (
     <>
-      <div className="container-fluid py-5 px-5 bg-grey">
+      <div className="container-fluid py-5 bg-grey">
         <div className="container">
           <div className="row align-items-center">
             {/* Left Image Section */}
@@ -37,10 +37,9 @@ const HeroSection = () => {
               </p>
 
               {/* Vision and Goal Cards */}
-              <div className="d-flex justify-content-between mt-4">
+              <div className="d-flex justify-content-between flex-column flex-md-row gap-3 mt-4">
                 <div
                   className="me-2 align-items-center"
-                  style={{ width: "50%" }}
                 >
                   <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
                     {/* Icon Section */}
@@ -63,8 +62,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div
-                  className="d-flex ms-2 align-items-center"
-                  style={{ width: "50%" }}
+                  className="d-flex align-items-center"
                 >
                   <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
                     {/* Icon Section */}

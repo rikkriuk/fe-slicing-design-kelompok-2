@@ -1,7 +1,6 @@
 .section-card h4 {
   font-size: 24px;
   font-weight: bold;
-  color: #ff3e54;
 }
 .section-card h6 {
   margin-top: 6px !important;
@@ -17,7 +16,6 @@
   color: #0e1f51;
 }
 .section-card {
-  margin-top: 30px;
   text-align: center;
 }
 
