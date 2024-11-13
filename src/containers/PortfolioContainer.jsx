@@ -1,10 +1,11 @@
 import React from "react";
+import OurWorkComponent from "../components/OurWork/OurWorkComponent";
 
 const PortofolioContainer = () => {
    return (
-        <div>
-            <h1>Portofolio Container</h1>
-        </div>
+        <>
+            <OurWorkComponent />
+        </>
     )
 }
 
