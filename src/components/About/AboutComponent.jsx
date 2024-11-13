@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutStyle.css";
+import "./AboutStyles.css";
 
 //function for about page
 const AboutComponent = ({ title, subtitle }) => {

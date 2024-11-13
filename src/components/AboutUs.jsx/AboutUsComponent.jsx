@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutUsStyle.css";
+import "./AboutUsStyles.css";
 import aboutUs from "../../assets/AboutUs.jpeg";
 
 // Function for About us Component
