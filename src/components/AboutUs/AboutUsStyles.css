@@ -1,0 +1,35 @@
+.about-section {
+  padding: 60px 0;
+  background-color: #f7f7f7;
+}
+
+.about-section h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff3e54;
+  margin-top: 20px;
+}
+.about-section h1 {
+  font-size: 40px;
+  color: #0e1f51;
+}
+.about-section p {
+  font-size: 16px;
+  color: #666;
+}
+.about-section .card {
+  border: none;
+  background-color: #fff;
+}
+.about-section .card-body .i-cstm {
+  background-color: #f7f7f7;
+  color: #ff3e54;
+  margin: 0 5px;
+}
+
+.about-section .card-body p {
+  margin: 0 1px !important;
+}
+.about-section .card-body span {
+  color: #ff3e54;
+}
