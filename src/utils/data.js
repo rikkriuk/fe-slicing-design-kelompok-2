@@ -8,10 +8,10 @@ import WebMigra from "../assets/ServicesComponent/Icons/WebsiteMigration.png";
 import AppDev from "../assets/ServicesComponent/Icons/AppDev.png";
 import HubSpot from "../assets/ServicesComponent/Icons/HubSpot.png";
 import Email from "../assets/ServicesComponent/Icons/Email.png";
-import person from "../assets/Person1.jpeg";
-import person2 from "../assets/Person2.png";
-import person3 from "../assets/Person3.jpeg";
-import person4 from "../assets/Person4.jpeg";
+import Person1 from "../assets/Person1.jpeg";
+import Person2 from "../assets/Person2.png";
+import Person3 from "../assets/person3.jpeg";
+import Person4 from "../assets/person4.jpeg";
 
 const planingData = [
   {
@@ -80,10 +80,10 @@ const servicesData = [
 ];
 
 const leadersData = [
-  { name: "Larry F. Burnett", jabatan: "CEO", image: person },
-  { name: "Meghan J. Webb", jabatan: "CTO", image: person2 },
-  { name: "Yvonne J. Cullum", jabatan: "COO", image: person3 },
-  { name: "Diana H. Williams", jabatan: "CEO", image: person4 },
+  { name: "Larry F. Burnett", jabatan: "CEO", image: Person1 },
+  { name: "Meghan J. Webb", jabatan: "CTO", image: Person2 },
+  { name: "Yvonne J. Cullum", jabatan: "COO", image: Person3 },
+  { name: "Diana H. Williams", jabatan: "CEO", image: Person4 },
 ];
 
 export { planingData, servicesData, leadersData };
