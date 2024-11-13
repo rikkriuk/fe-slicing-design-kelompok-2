@@ -6,6 +6,8 @@ import HeroServiceSection from "../components/Services/HeroServiceComponent";
 import ExpertiseSection from "../components/Services/ExperticeComponent";
 import CardComponent from "../components/Card/CardComponent";
 import { planingData, servicesData, leadersData } from "../utils/data";
+import FormContactComponent from "../components/Contact/FormContactComponent";
+import BannerComponent from "../components/Banner/BannerComponent";
 
 const HomeContainer = () => {
 
@@ -19,6 +21,11 @@ const HomeContainer = () => {
             <TitlePageComponent title={"Services"} description={"Our Expertice"} />
             <ExpertiseSection services={servicesData}/>
             <CardComponent leadersData={leadersData}/>
+            <div className="bg-color-container-contact">
+                <TitlePageComponent title="Get In Touch" description="Hey! Lets Talk" />
+                <FormContactComponent />
+            </div>
+            <BannerComponent />
         </>
     )
 }
