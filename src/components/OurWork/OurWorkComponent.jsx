@@ -1,5 +1,6 @@
 import React from "react";
 import "./OurWorkStyles.css";
+import TitlePageComponent from "../TitlePage/TitlePageComponent";
 import Image1 from "../../assets/OurWorkComponent/image-1.png";
 import Image2 from "../../assets/OurWorkComponent/image-2.png";
 import Image3 from "../../assets/OurWorkComponent/image-3.png";
@@ -8,8 +9,9 @@ import Image5 from "../../assets/OurWorkComponent/image-5.png";
 
 const OurWorkComponent = () => {
    return (
-      <section className="container-fluid py-5">
+      <section className="container-fluid pe-5">
          <div className="container d-flex flex-column align-items-center">
+            <TitlePageComponent title={"Portfolio"} description={"Our Work"} />
             <div>
                <button className="btn-work-custom active">ALL</button>
                <button className="btn-work-custom">LIFE</button>
