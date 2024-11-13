@@ -10,7 +10,7 @@ import HubSpot from "../assets/ServicesComponent/Icons/HubSpot.png";
 import Email from "../assets/ServicesComponent/Icons/Email.png";
 import person from "../assets/Person1.jpeg";
 import person2 from "../assets/Person2.png";
-import person3 from "../assets/Person3.jpeg";
+// import person3 from "../assets/Person3.jpeg";
 import person4 from "../assets/Person4.jpeg";
 
 const planingData = [
@@ -82,7 +82,7 @@ const servicesData = [
 const leadersData = [
   { name: "Larry F. Burnett", jabatan: "CEO", image: person },
   { name: "Meghan J. Webb", jabatan: "CTO", image: person2 },
-  { name: "Yvonne J. Cullum", jabatan: "COO", image: person3 },
+  { name: "Yvonne J. Cullum", jabatan: "COO", image: person2 },
   { name: "Diana H. Williams", jabatan: "CEO", image: person4 },
 ];
 
