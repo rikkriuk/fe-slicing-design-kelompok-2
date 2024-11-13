@@ -29,11 +29,11 @@ const NavbarComponent = () => {
                </div>
 
                <ul className="d-flex align-items-center gap-4 list-unstyled m-0">
-                  <li><Link className="text-decoration-none text-second-color fw-semibold" to={"/about"}>About</Link></li>
-                  <li><Link className="text-decoration-none text-second-color fw-semibold" to={"/our-services"}>Our Services</Link></li>
-                  <li><Link className="text-decoration-none text-second-color fw-semibold" to={"/portfolio"}>Portfolio</Link></li>
-                  <li><Link className="text-decoration-none text-second-color fw-semibold" to={"/blog"}>Blog</Link></li>
-                  <li><Link className="text-decoration-none text-second-color fw-semibold" to={"/contact"}>Contact</Link></li>
+                  <li><Link onClick={toggleNavbar} className="text-decoration-none text-second-color fw-semibold" to={"/about"}>About</Link></li>
+                  <li><Link onClick={toggleNavbar} className="text-decoration-none text-second-color fw-semibold" to={"/our-services"}>Our Services</Link></li>
+                  <li><Link onClick={toggleNavbar} className="text-decoration-none text-second-color fw-semibold" to={"/portfolio"}>Portfolio</Link></li>
+                  <li><Link onClick={toggleNavbar} className="text-decoration-none text-second-color fw-semibold" to={"/blog"}>Blog</Link></li>
+                  <li><Link onClick={toggleNavbar} className="text-decoration-none text-second-color fw-semibold" to={"/contact"}>Contact</Link></li>
                </ul>
 
                <button className="btn-custom">Get In Touch</button>
