@@ -5,7 +5,7 @@ const TitlePageComponent = ({ title, description }) => {
   return (
     <div className="container-fluid">
       <div className="container">
-        <div class="d-flex justify-content-center text-center pd-custom-title ">
+        <div className="d-flex justify-content-center text-center pd-custom-title ">
           <div>
             <h4 className="color-primary-title fw-bold">\ {title} \</h4>
             <h4 className="color-secondary-title fs-1 fw-bold">
