@@ -1,0 +1,14 @@
+.card .card-body h2 {
+  color: #ff3e54;
+  font-size: 20px;
+}
+.card .card-body p {
+  color: #252525;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.card .card-body .p-custom {
+  color: #0e1f51;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
