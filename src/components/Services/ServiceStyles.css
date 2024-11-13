@@ -1,0 +1,63 @@
+/* Red color */
+.text-red {
+  color: #ff3e54;
+}
+
+/* Blue color */
+.text-blue {
+  color: #0e1f51;
+}
+
+/* Grey background */
+.bg-grey {
+  background-color: #f7f7f7;
+}
+
+/* Red line */
+.red-line {
+  width: 60px;
+  height: 6px;
+  background-color: #ff3e54;
+  border-radius: 20px;
+}
+
+/* Goal Card */
+.goal-card {
+  background-color: #ffffff; /* Card background color */
+  border-radius: 12px; /* Rounded corners */
+  max-width: 300px; /* Optional: adjust as needed */
+}
+
+/* Icon Container */
+.icon-container .icon-bg {
+  background-color: #ffe6e6; /* Light red/pink background */
+  width: 60px;
+  height: 60px;
+} 
+
+/* Icon Image */
+.icon-container .icon-bg .icon-img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Danger title color */
+.text-danger {
+  color: #ff6b6b; /* Custom color for the title */
+}
+
+/* Small shadow */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Small shadow for subtle effect */
+}
+
+/* Card custom style */
+.card-cstm {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card hover effect */
+.card-cstm:hover {
+  transform: translateY(-10px);
+}
+
