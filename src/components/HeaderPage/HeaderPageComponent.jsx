@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeaderPageStyles.css";
 
-const HeaderPage = ({ page }) => {
+const HeaderPageComponent = ({ page }) => {
   return (
     <div className="container-fluid bg-header-page">
       <div className="container ">
@@ -16,4 +16,4 @@ const HeaderPage = ({ page }) => {
   );
 };
 
-export default HeaderPage;
+export default HeaderPageComponent;
