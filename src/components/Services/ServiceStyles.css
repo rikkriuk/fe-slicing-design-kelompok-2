@@ -25,20 +25,20 @@
 .goal-card {
   background-color: #ffffff; /* Card background color */
   border-radius: 12px; /* Rounded corners */
-  max-width: 350px; /* Optional: adjust as needed */
+  max-width: 300px; /* Optional: adjust as needed */
 }
 
 /* Icon Container */
 .icon-container .icon-bg {
   background-color: #ffe6e6; /* Light red/pink background */
-  width: 60px; /* Adjust size as needed */
-  height: 60px; /* Adjust size as needed */
+  width: 60px;
+  height: 60px;
 } 
 
 /* Icon Image */
 .icon-container .icon-bg .icon-img {
-  width: 30px; /* Adjust size as needed */
-  height: 30px; /* Adjust size as needed */
+  width: 30px;
+  height: 30px;
 }
 
 /* Danger title color */

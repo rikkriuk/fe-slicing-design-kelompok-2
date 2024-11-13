@@ -39,10 +39,8 @@ const HeroSection = ({ page }) => {
 
               {/* Vision and Goal Cards */}
               <div className="d-flex justify-content-between flex-column flex-md-row gap-3 mt-4">
-                <div
-                  className="me-2 d-flex flex-column flex-lg-row gap-3"
-                >
-                  <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
+                <div className="me-2 d-flex flex-column flex-lg-row gap-3">
+                  <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded mb-lg-0 mb-4">
                     {/* Icon Section */}
                     <div className="icon-container me-3">
                       <div className="icon-bg d-flex justify-content-center align-items-center rounded">
@@ -61,13 +59,15 @@ const HeroSection = ({ page }) => {
                       </p>
                     </div>
                   </div>
-                  
+                </div>
+
+                <div className="d-flex ms-lg-2 align-items-center">
                   <div className="goal-card d-flex align-items-center p-3 shadow-sm rounded">
                     {/* Icon Section */}
                     <div className="icon-container me-3">
                       <div className="icon-bg d-flex justify-content-center align-items-center rounded">
                         <img
-                          src={star} // Replace with your icon path
+                          src={star}
                           alt="Goal Icon"
                           className="icon-img"
                         />
@@ -83,6 +83,7 @@ const HeroSection = ({ page }) => {
                   </div>
                 </div>
               </div>
+              
               {page === "home" && (
                 <div className="my-5">
                   <Link to={"/our-services"} className="btn-view-more text-decoration-none">View More</Link>
@@ -95,5 +96,5 @@ const HeroSection = ({ page }) => {
     </>
   );
 };
+
 export default HeroSection;
- 
