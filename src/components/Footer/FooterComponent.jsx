@@ -36,22 +36,22 @@ const FooterComponent = () => {
                <div className="mt-4">
                   <ul className="list-unstyled d-flex flex-column gap-3">
                      <li>
-                        <a className="text-decoration-none text-white" href="">Web Design/Development</a>
+                        <a className="text-decoration-none text-white footer-text" href="">Web Design/Development</a>
                      </li>
                      <li>
-                        <a className="text-decoration-none text-white" href="">App Development</a>
+                        <a className="text-decoration-none text-white footer-text" href="">App Development</a>
                      </li>
                      <li>
-                        <a className="text-decoration-none text-white" href="">UI/UX Design</a>
+                        <a className="text-decoration-none text-white footer-text" href="">UI/UX Design</a>
                      </li>
                      <li>
-                        <a className="text-decoration-none text-white" href="">HubSpot Integration</a>
+                        <a className="text-decoration-none text-white footer-text" href="">HubSpot Integration</a>
                      </li>
                      <li>
-                        <a className="text-decoration-none text-white" href="">Email Marketing</a>
+                        <a className="text-decoration-none text-white footer-text" href="">Email Marketing</a>
                      </li>
                      <li>
-                        <a className="text-decoration-none text-white" href="">Website Migration</a>
+                        <a className="text-decoration-none text-white footer-text" href="">Website Migration</a>
                      </li>
                   </ul>
                </div>

@@ -6,7 +6,7 @@ const CardComponent = ({ leadersData }) => {
   return (
     // section card for About Component
     <section className="section-card container mb-5">
-      <TitlePageComponent title={"Services"} description={"Our Expertice"} />
+      <TitlePageComponent title={"Team"} description={"Our Leaders"} />
       <div className="row">
         {leadersData &&
           leadersData.map((item, index) => (

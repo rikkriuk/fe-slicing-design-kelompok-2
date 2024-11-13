@@ -19,7 +19,7 @@ const HomeContainer = () => {
             <AboutUsComponent />
             <TitlePageComponent title={"Planning"} description={"Our Work"} />
             <ExpertiseSection services={planingData}/>
-            <HeroServiceSection />
+            <HeroServiceSection page={"home"}/>
             <TitlePageComponent title={"Services"} description={"Our Expertice"} />
             <ExpertiseSection services={servicesData}/>
             <TestimonialComponent />

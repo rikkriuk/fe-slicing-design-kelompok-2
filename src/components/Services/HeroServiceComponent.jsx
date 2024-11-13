@@ -5,7 +5,7 @@ import lamp from "../../assets/ServicesComponent/Icons/lamp.png";
 import star from "../../assets/ServicesComponent/Icons/star.png";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => {
+const HeroSection = ({ page }) => {
   return (
     <>
       <div className="container-fluid py-5 bg-grey">
@@ -83,9 +83,11 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="my-5">
-                <Link to={"/our-services"} className="btn-view-more text-decoration-none">View More</Link>
-              </div>
+              {page === "home" && (
+                <div className="my-5">
+                  <Link to={"/our-services"} className="btn-view-more text-decoration-none">View More</Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
