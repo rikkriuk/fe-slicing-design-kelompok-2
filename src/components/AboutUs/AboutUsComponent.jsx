@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutUsStyles.css";
-import aboutUs from "../../assets/AboutUs.jpegnp";
+import aboutUs from "../../assets/AboutUs.jpeg";
 
 // Function for About us Component
 const AboutUsComponent = () => {

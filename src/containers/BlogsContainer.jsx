@@ -6,6 +6,8 @@ const BlogsContainer = () => {
     <div>
       <BlogTopComponent />
       <BlogBottomComponenet />
+      <BlogBottomComponenet />
+      <BlogBottomComponenet />
     </div>
   );
 };
