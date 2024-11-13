@@ -31,7 +31,7 @@ const BlogTopComponent = () => {
                         className="img-fluid rounded-circle me-2"
                       />
                       <p className="m-0 color-author-blog fw-bold">
-                        Patricia Anderson
+                        Ranold Jeff.
                       </p>
                     </div>
                   </div>
@@ -43,13 +43,13 @@ const BlogTopComponent = () => {
 
           <div className="col-md-6 d-flex flex-column h-100 mb-2">
             <div className="card mb-4 p-3 shadow flex-grow-1">
-              <div className="d-flex">
+              <div className="d-flex flex-column flex-md-row align-items-center">
                 <img
                   src={SecondImage}
                   alt=""
                   height="185"
                   width="185"
-                  className="rounded my-2 mx-3"
+                  className="rounded my-2 mx-3 image-blog"
                 />
                 <div className="d-flex align-items-start flex-column flex-grow-1">
                   <div className="p-2">
@@ -58,7 +58,7 @@ const BlogTopComponent = () => {
                     </p>
                   </div>
                   <div className="px-2">
-                    <h3 className="color-primary-blog m-0 fs-5 fs-lg-4">
+                    <h3 className="color-primary-blog m-0 fs-5 my-2 fs-lg-4">
                       The most Popular Business Of the Year
                     </h3>
                   </div>
@@ -81,13 +81,13 @@ const BlogTopComponent = () => {
             </div>
 
             <div className="card p-3 shadow flex-grow-1">
-              <div className="d-flex">
+              <div className="d-flex flex-column flex-md-row align-items-center">
                 <img
                   src={ThirdImage}
                   alt=""
                   height="185"
                   width="185"
-                  className="rounded my-2 mx-3"
+                  className="rounded my-2 mx-3 image-blog"
                 />
                 <div className="d-flex align-items-start flex-column flex-grow-1">
                   <div className="p-2">
@@ -96,7 +96,7 @@ const BlogTopComponent = () => {
                     </p>
                   </div>
                   <div className="px-2">
-                    <h3 className="color-primary-blog m-0 fs-5 fs-lg-4">
+                    <h3 className="color-primary-blog m-0 fs-5 my-2 fs-lg-4">
                       The most Popular Business Of the Year
                     </h3>
                   </div>
