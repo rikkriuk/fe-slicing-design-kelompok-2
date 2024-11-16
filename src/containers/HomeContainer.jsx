@@ -10,11 +10,12 @@ import FormContactComponent from "../components/Contact/FormContactComponent";
 import BannerComponent from "../components/Banner/BannerComponent";
 import TestimonialComponent from "../components/Testimonial/TestimonialComponent";
 import BlogBottomComponenet from "../components/BlogBottom/BlogBottomComponent";
+import MetaComponent from "../components/Meta/MetaComponent";
 
 const HomeContainer = () => {
-
    return (
         <>
+            <MetaComponent page={"home"}/>
             <HeroComponent />
             <AboutUsComponent />
             <TitlePageComponent title={"Planning"} description={"Our Work"} />

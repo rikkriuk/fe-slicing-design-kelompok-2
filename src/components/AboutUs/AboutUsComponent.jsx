@@ -5,7 +5,7 @@ import aboutUs from "../../assets/AboutUs.jpeg";
 // Function for About us Component
 const AboutUsComponent = () => {
   return (
-    <section className="about-section">
+    <section className="about-section container-fluid">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6">
