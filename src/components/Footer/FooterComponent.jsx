@@ -5,6 +5,7 @@ import PythonLogo from "../../assets/python-logo.png";
 import ReactLogo from "../../assets/react-logo.png";
 import WordpressLogo from "../../assets/wordpress-logo.png";
 import axios from "axios";
+import DOMPurify from "dompurify";
 
 const FooterComponent = () => {
   const [email, setEmail] = useState("");
@@ -162,7 +163,7 @@ const FooterComponent = () => {
                 className="w-100 input-custom"
                 type="text"
                 placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(DOMPurify.sanitize(e.target.value))}
                 value={email}
               />
               <button className="btn-submit-custom">Submit</button>

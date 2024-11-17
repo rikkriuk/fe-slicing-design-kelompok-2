@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TitlePageComponent from "../TitlePage/TitlePageComponent";
 import "./FormContactStyles.css";
 import axios from "axios";
+import DOMPurify from "dompurify";
 
 const FormContactComponent = ({ page }) => {
   const [formData, setFormData] = useState({
@@ -12,9 +13,11 @@ const FormContactComponent = ({ page }) => {
   });
 
   const handleChange = ({ target: { name, value } }) => {
+    const sanitizedValue = DOMPurify.sanitize(value);
+
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: sanitizedValue,
     }));
   };
 
