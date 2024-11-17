@@ -1,22 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import TitlePageComponent from "../TitlePage/TitlePageComponent";
 import "./FormContactStyles.css";
+import axios from "axios";
 
 const FormContactComponent = ({ page }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = ({ target: { name, value } }) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    const apiUrl = `${import.meta.env.VITE_API_URL}api/contact`;
+    e.preventDefault();
+    try {
+      const response = await axios.post(apiUrl, formData);
+      console.log(response.data);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <div className={`container-fluid ${page === "home" ? "bg-contact-second" : "bg-color-container-contact"}`}>
-      <TitlePageComponent title="Get In Touch" description="Hey! Lets Talk" page={page} />
+    <div
+      className={`container-fluid ${
+        page === "home" ? "bg-contact-second" : "bg-color-container-contact"
+      }`}
+    >
+      <TitlePageComponent
+        title="Get In Touch"
+        description="Hey! Lets Talk"
+        page={page}
+      />
 
       <div className="container">
         <div className="row">
           <div className="col-md" />
-          <form className="col-md-8 card p-4 mb-5 me-3">
+          <form onSubmit={handleSubmit} className="col-md-8 card p-4 mb-5 me-3">
             <div className="my-3">
               <input
                 type="text"
                 className="form-control bg-input-contact py-2"
                 id="name"
+                name="name"
                 placeholder="Name"
+                onChange={handleChange}
+                required
+                value={formData.name}
               />
             </div>
             <div className="mb-3">
@@ -25,6 +68,10 @@ const FormContactComponent = ({ page }) => {
                 className="form-control bg-input-contact py-2"
                 id="email"
                 placeholder="Email"
+                name="email"
+                onChange={handleChange}
+                value={formData.email}
+                required
               />
             </div>
             <div className="mb-3">
@@ -33,6 +80,10 @@ const FormContactComponent = ({ page }) => {
                 className="form-control bg-input-contact py-2"
                 id="phone"
                 placeholder="Phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="mb-3">
@@ -40,6 +91,9 @@ const FormContactComponent = ({ page }) => {
                 className="form-control bg-input-contact py-2"
                 id="exampleFormControlTextarea1"
                 rows="5"
+                value={formData.message}
+                name="message"
+                onChange={handleChange}
                 placeholder="Your Message"
               ></textarea>
             </div>
