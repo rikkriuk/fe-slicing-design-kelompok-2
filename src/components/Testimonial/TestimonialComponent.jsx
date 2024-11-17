@@ -1,38 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import 'swiper/css/bundle';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import FirstTestimonialPersonImage from "../../assets/testimonial-1.png";
-import SecondTestimonialPersonImage from "../../assets/testimonial-2.png";
 import Backtick from "../../assets/backtick.png";
 import "./TestimonialStyles.css";
 import TitlePageComponent from "../TitlePage/TitlePageComponent";
-
-const testimonials = [
-  {
-    name: "Daria Linney",
-    position: "CEO",
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
-    image: SecondTestimonialPersonImage,
-    backtickImage: Backtick,
-  },
-  {
-    name: "Samual Karl",
-    position: "CEO",
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
-    image: FirstTestimonialPersonImage,
-    backtickImage: Backtick,
-  },
-  {
-    name: "Daria Linney",
-    position: "CEO",
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
-    image: SecondTestimonialPersonImage,
-    backtickImage: Backtick,
-  },
-];
+import { getTestimonial } from "../../utils/api";
 
 const TestimonialComponent = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getTestimonial().then((res) => {
+      setData(res.data.data);
+    });
+  }, [])
   return (
     <>
       <TitlePageComponent title={"From our Customers"} description={"Testimonials"} />
@@ -60,19 +42,20 @@ const TestimonialComponent = () => {
         }}
         className="mySwiper"
       >
-        {testimonials.map((testimonial, index) => (
+        {data.map((item, index) => (
           <SwiperSlide key={index} className="testimonial-slide">
             <div className="testimonial-content shadow-lg">
               <div className="d-flex justify-content-between align-items-center">
-                <img src={testimonial.image} alt="" width={70} height={70} />
-                <img src={testimonial.backtickImage} alt="" width={60} height={60} />
+                <img src={item?.imageUrl} alt="image-testimoni" className="rounded" width={70} height={70} />
+                <img src={Backtick} alt="backtick" width={60} height={60} />
               </div>
 
               <div className="mt-5 d-flex flex-column justify-content-start align-items-start">
-                <p className="text-start">{testimonial.text}</p>
+                <h5 className="text-start">{item?.title}</h5>
+                <p className="text-start">{item?.message}</p>
                 <div className="text-start mt-3">
-                  <h5 className="text-main-color">{testimonial.name}</h5>
-                  <p>{testimonial.position}</p>
+                  <h5 className="text-main-color">{item?.name}</h5>
+                  <p>{item?.date}</p>
                 </div>
               </div>
             </div>

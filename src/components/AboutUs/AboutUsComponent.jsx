@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AboutUsStyles.css";
-import aboutUs from "../../assets/AboutUs.jpeg";
+import { getAboutUs } from "../../utils/api";
 
 // Function for About us Component
 const AboutUsComponent = () => {
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    getAboutUs().then((res) => {
+      setData(res.data.data);
+    });
+  }, [])
+
   return (
     <section className="about-section container-fluid">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6">
             <img
-              src={aboutUs}
+              src={data?.imageUrl}
               alt="about-us"
               height="400"
               width="550"
@@ -19,12 +27,9 @@ const AboutUsComponent = () => {
           </div>
           <div className="col-md-6">
             <h4>\ About us \</h4>
-            <h1 className="fs-1 fs-sm-4 fs-md-5 fs-lg-6 my-3"> One of the Fastest Way to Business Growth</h1>
+            <h1 className="fs-1 fs-sm-4 fs-md-5 fs-lg-6 my-3">{data?.title}</h1>
             <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed
+              {data?.desc}
             </p>
             <div className="card">
               <div className="card-body">

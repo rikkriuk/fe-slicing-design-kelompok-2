@@ -1,45 +1,45 @@
-import React from "react";
-import potoBlog from "../../assets/potoblog3.jpeg";
+import React, { useEffect, useState } from "react";
 import "./BlogDetailStyles.css";
-import BlogBottomComponenet from "../BlogBottom/BlogBottomComponent";
+import { getArticleBySlug } from "../../utils/api";
+import { useParams } from "react-router-dom";
 
 const BlogDetailComponent = () => {
+  const [data, setData] = useState(null);
+  const { slug } = useParams();
+
+  useEffect(() => {
+    getArticleBySlug(slug)
+      .then((res) => {
+        setData(res.data.data);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch article:", err);
+      });
+  }, [slug]);
+
   return (
-    <div className="container">
+    <div className="container-fluid mt-5">
       <div className="container">
-        <div className="text-center text-cstm">
-          <h1 className="display-4">Blog Post Title</h1>
-          <p className="lead"> By Author Name | January 1, 2023</p>
+        <div className="text-cstm mb-4">
+          <h1 className="fs-2">{data?.title}</h1>
+          <p className="fs-6 text-muted">
+            By {data?.writer || "Unknown Author"} | {new Date(data?.date).toLocaleDateString()}
+          </p>
         </div>
-        <div className="blog-content container">
+
+        <div className="blog-content my-4">
           <img
-            src={potoBlog}
-            alt=""
-            height="700"
-            width="1270"
-            className="mx-0"
+            src={data?.imageUrl}
+            alt={data?.title}
+            className="w-100 h-auto border blog-detail-img"
           />
         </div>
-        <p className="mx-3">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita,
-          necessitatibus perspiciatis quas provident saepe sequi corrupti
-          deleniti amet quos sed. Reprehenderit sequi quibusdam quas provident
-          beatae quae dolore officiis cupiditate
-        </p>
-        <p className="mx-3">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita,
-          necessitatibus perspiciatis quas provident saepe sequi corrupti
-          deleniti amet quos sed. Reprehenderit sequi quibusdam quas provident
-          beatae quae dolore officiis cupiditate
-        </p>
-        <p className="mx-3">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita,
-          necessitatibus perspiciatis quas provident saepe sequi corrupti
-          deleniti amet quos sed. Reprehenderit sequi quibusdam quas provident
-          beatae quae dolore officiis cupiditate
-        </p>
+
+        <div
+          className="blog-description"
+          dangerouslySetInnerHTML={{ __html: data?.content }}
+        ></div>
       </div>
-      <BlogBottomComponenet />
     </div>
   );
 };

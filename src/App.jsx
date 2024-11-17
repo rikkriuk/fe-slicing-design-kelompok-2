@@ -22,7 +22,7 @@ function App() {
           <Route path="/blog" element={<BlogsContainer />} />
           <Route path="/portfolio" element={<PortfolioContainer />} />
           <Route path="/contact" element={<ContactContainer />} />
-          <Route path="/blogdetail" element={<BlogDetailComponent />} />
+          <Route path="/blog/:slug" element={<BlogDetailComponent />} />
         </Routes>
       </LayoutComponent>
     </Router>

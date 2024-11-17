@@ -166,7 +166,7 @@ const FooterComponent = () => {
                 onChange={(e) => setEmail(DOMPurify.sanitize(e.target.value))}
                 value={email}
               />
-              <button className="btn-submit-custom">Submit</button>
+              <button className="btn-submit-custom mt-3">Submit</button>
             </form>
           </div>
         </section>
