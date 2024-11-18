@@ -33,7 +33,7 @@
   background-color: #ffe6e6; /* Light red/pink background */
   width: 60px;
   height: 60px;
-} 
+}
 
 /* Icon Image */
 .icon-container .icon-bg .icon-img {
@@ -61,3 +61,6 @@
   transform: translateY(-10px);
 }
 
+.image-hero-service {
+  width: 100%;
+}

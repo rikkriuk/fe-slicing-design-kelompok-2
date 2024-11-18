@@ -6,8 +6,8 @@ const ExpertiseSection = ({ services }) => {
       <div className="container text-center">
         <div className="row mt-2 mb-5">
           {services.map((service, index) => (
-            <div className={`${services.length === 4 ? "col-md-3" : "col-md-4"} mb-4 position-relative`} key={index}>
-              <div className="h-100 shadow-sm">
+            <div className={`${services.length === 4 ? "col-md-3" : "col-md-4"} mb-4`} key={index}>
+              <div className="h-100 shadow-sm position-relative">
                 <div className="text-start p-4 rounded h-full bg-grey card-cstm">
                   <div className="mb-3">
                     <img

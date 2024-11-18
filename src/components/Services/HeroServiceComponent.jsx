@@ -1,11 +1,19 @@
-import React from "react";
-import heroImage from "../../assets/ServicesComponent/hero-img.png";
+import React, { useEffect, useState } from "react";
 import "./ServiceStyles.css";
 import lamp from "../../assets/ServicesComponent/Icons/lamp.png";
 import star from "../../assets/ServicesComponent/Icons/star.png";
 import { Link } from "react-router-dom";
+import { getWhatWeDo } from "../../utils/api";
 
 const HeroSection = ({ page }) => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getWhatWeDo().then((res) => {
+      setData(res.data.data[0]);
+    });
+  }, []);
+
   return (
     <>
       <div className="container-fluid py-5 bg-grey">
@@ -14,9 +22,9 @@ const HeroSection = ({ page }) => {
             {/* Left Image Section */}
             <div className="col-lg-6 mb-4 mb-lg-0">
               <img
-                src={heroImage} // Replace with your image path
+                src={data?.imageUrl} // Replace with your image path
                 alt="Team Working"
-                className="img-fluid rounded"
+                className="img-fluid rounded image-hero-service"
               />
             </div>
 
@@ -24,17 +32,10 @@ const HeroSection = ({ page }) => {
             <div className="col-lg-6">
               <h5 className="text-red fw-bold fs-3 mb-2">\ What We Do \</h5>
               <h2 className="my-4 fw-semibold fs-1 fs-sm-4 fs-md-5 fs-lg-6 text-blue mb-3">
-                We Develop Product That People Love to Use.
+                {data?.title}
               </h2>
               <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed, of a page when
-                looking at its layout. The point of using Lorem Ipsum is that of
-                a page when looking at its layout. The point of using Lorem
-                Ipsum is thatLorem Ipsum is that it has a more-or-less
-                normalLorem IpsumLorem Ipsum distribution of letters, as opposed
+                {data?.desc}
               </p>
 
               {/* Vision and Goal Cards */}

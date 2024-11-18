@@ -4,3 +4,12 @@
 .text-cstm h1 {
   color: #ff3e54;
 }
+.blog-detail-img {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .blog-detail-img {
+    width: 100%;
+  }
+}
