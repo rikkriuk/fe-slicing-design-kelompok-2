@@ -9,6 +9,7 @@ import LayoutComponent from "./components/Layout/LayoutComponent";
 import BlogsContainer from "./containers/BlogsContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import BlogDetailComponent from "./components/BlogDetail/BlogDetailComponent";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/blog" element={<BlogsContainer />} />
           <Route path="/portfolio" element={<PortfolioContainer />} />
           <Route path="/contact" element={<ContactContainer />} />
+          <Route path="/blog/:slug" element={<BlogDetailComponent />} />
         </Routes>
       </LayoutComponent>
     </Router>

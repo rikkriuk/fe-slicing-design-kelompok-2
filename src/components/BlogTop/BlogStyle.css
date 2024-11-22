@@ -6,6 +6,11 @@
   color: #0e1f51;
 }
 
+.height-custom-blog {
+  background-color: #ff3e54;
+  height: 500px;
+}
+
 @media (max-width: 768px) {
   .image-blog {
     width: 100%;

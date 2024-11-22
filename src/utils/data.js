@@ -12,6 +12,12 @@ import Person1 from "../assets/Person1.jpeg";
 import Person2 from "../assets/Person2.png";
 import Person3 from "../assets/person3.jpeg";
 import Person4 from "../assets/person4.jpeg";
+import FirstPerson from "../assets/BlogsComponent/person-1.jpeg";
+import SecondPerson from "../assets/BlogsComponent/person-2.png";
+import ThirdPerson from "../assets/BlogsComponent/person-3.png";
+import FirstImage from "../assets/BlogsComponent/image-1.jpeg";
+import SecondImage from "../assets/BlogsComponent/image-2.png";
+import ThirdImage from "../assets/BlogsComponent/image-3.png";
 
 const planingData = [
   {
@@ -86,4 +92,28 @@ const leadersData = [
   { name: "Diana H. Williams", jabatan: "CEO", image: Person4 },
 ];
 
-export { planingData, servicesData, leadersData };
+const blogsData = [
+  {
+    image: FirstImage,
+    title: "The most Popular Business Of the Year",
+    authorImage: FirstPerson,
+    authorName: "Ranold Jeff.",
+    date: "Apr 20th, 2022",
+  },
+  {
+    image: SecondImage,
+    title: "The most Popular Business Of the Year",
+    authorImage: SecondPerson,
+    authorName: "Patricia Anderson",
+    date: "May, 4th 2022",
+  },
+  {
+    image: ThirdImage,
+    title: "The most Popular Business Of the Year",
+    authorImage: ThirdPerson,
+    authorName: "Elaine Luna",
+    date: "May, 4th 2022",
+  },
+];
+
+export { planingData, servicesData, leadersData, blogsData };

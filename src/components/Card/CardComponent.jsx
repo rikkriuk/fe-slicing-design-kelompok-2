@@ -14,14 +14,14 @@ const CardComponent = ({ leadersData }) => {
               <div className="card container">
                 <div className="card-body px-0 py-1">
                   <img
-                    src={item.image}
+                    src={item.imageUrl}
                     alt="person"
                     className="img-fluid rounded"
                     height="300"
                     width="263"
                   />
                   <h6>{item.name}</h6>
-                  <p>{item.jabatan}</p>
+                  <p>{item.title}</p>
                 </div>
               </div>
             </div>
